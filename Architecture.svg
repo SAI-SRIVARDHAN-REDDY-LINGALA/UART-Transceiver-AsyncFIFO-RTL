@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="921pt" height="556pt" viewBox="0.00 0.00 921.00 556.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 552)">
+<title>uart_top_hierarchy</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-552 916.72,-552 916.72,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_inputs</title>
+<polygon fill="none" stroke="#7f8c8d" stroke-dasharray="5,2" points="8,-46 8,-383 158.14,-383 158.14,-46 8,-46"/>
+<text xml:space="preserve" text-anchor="middle" x="83.07" y="-366.4" font-family="Arial Bold" font-size="14.00">Top-Level Inputs</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_outputs</title>
+<polygon fill="none" stroke="#7f8c8d" stroke-dasharray="5,2" points="746.41,-8 746.41,-540 904.72,-540 904.72,-8 746.41,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-523.4" font-family="Arial Bold" font-size="14.00">Top-Level Outputs</text>
+</g>
+<!-- clk -->
+<g id="node1" class="node">
+<title>clk</title>
+<ellipse fill="#ebf5fb" stroke="black" cx="83.07" cy="-267" rx="62.99" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="83.07" y="-263.7" font-family="Courier New" font-size="11.00">clk (100 MHz)</text>
+</g>
+<!-- brg -->
+<g id="node6" class="node">
+<title>brg</title>
+<path fill="#d4efdf" stroke="#27ae60" stroke-width="2" d="M330.56,-232.3C330.56,-232.3 213.14,-232.3 213.14,-232.3 207.14,-232.3 201.14,-226.3 201.14,-220.3 201.14,-220.3 201.14,-183.7 201.14,-183.7 201.14,-177.7 207.14,-171.7 213.14,-171.7 213.14,-171.7 330.56,-171.7 330.56,-171.7 336.56,-171.7 342.56,-177.7 342.56,-183.7 342.56,-183.7 342.56,-220.3 342.56,-220.3 342.56,-226.3 336.56,-232.3 330.56,-232.3"/>
+<text xml:space="preserve" text-anchor="middle" x="271.85" y="-218.4" font-family="Courier New" font-size="11.00">Baud Rate Generator</text>
+<text xml:space="preserve" text-anchor="middle" x="271.85" y="-205.2" font-family="Courier New" font-size="11.00">(baud_gen.v)</text>
+<text xml:space="preserve" text-anchor="middle" x="271.85" y="-179" font-family="Courier New" font-size="11.00">Divisor: 651</text>
+</g>
+<!-- clk&#45;&gt;brg -->
+<g id="edge1" class="edge">
+<title>clk-&gt;brg</title>
+<path fill="none" stroke="#2c3e50" d="M124.14,-253.06C143.3,-246.39 166.95,-238.16 189.63,-230.26"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="190.59,-233.64 198.88,-227.04 188.29,-227.03 190.59,-233.64"/>
+</g>
+<!-- rx_inst -->
+<g id="node7" class="node">
+<title>rx_inst</title>
+<path fill="#fdeabc" stroke="#e67e22" stroke-width="2" d="M616.8,-406.9C616.8,-406.9 453.17,-406.9 453.17,-406.9 447.17,-406.9 441.17,-400.9 441.17,-394.9 441.17,-394.9 441.17,-345.1 441.17,-345.1 441.17,-339.1 447.17,-333.1 453.17,-333.1 453.17,-333.1 616.8,-333.1 616.8,-333.1 622.8,-333.1 628.8,-339.1 628.8,-345.1 628.8,-345.1 628.8,-394.9 628.8,-394.9 628.8,-400.9 622.8,-406.9 616.8,-406.9"/>
+<text xml:space="preserve" text-anchor="middle" x="534.98" y="-393" font-family="Courier New" font-size="11.00">UART Receiver</text>
+<text xml:space="preserve" text-anchor="middle" x="534.98" y="-379.8" font-family="Courier New" font-size="11.00">(uart_rx.v)</text>
+<text xml:space="preserve" text-anchor="middle" x="534.98" y="-353.6" font-family="Courier New" font-size="11.00">States: IDLE, START, DATA,</text>
+<text xml:space="preserve" text-anchor="middle" x="534.98" y="-340.4" font-family="Courier New" font-size="11.00">PARITY, STOP</text>
+</g>
+<!-- clk&#45;&gt;rx_inst -->
+<g id="edge2" class="edge">
+<title>clk-&gt;rx_inst</title>
+<path fill="none" stroke="#2c3e50" d="M128.88,-279.64C139.68,-284.51 150.34,-291.12 158.14,-300 175.59,-319.86 154.4,-340.6 175.14,-357 245.9,-412.95 351.31,-409.8 429.59,-396.49"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="429.73,-400.02 438.96,-394.82 428.5,-393.13 429.73,-400.02"/>
+</g>
+<!-- tx_inst -->
+<g id="node8" class="node">
+<title>tx_inst</title>
+<path fill="#d6eaf8" stroke="#2980b9" stroke-width="2" d="M616.8,-164.9C616.8,-164.9 453.17,-164.9 453.17,-164.9 447.17,-164.9 441.17,-158.9 441.17,-152.9 441.17,-152.9 441.17,-103.1 441.17,-103.1 441.17,-97.1 447.17,-91.1 453.17,-91.1 453.17,-91.1 616.8,-91.1 616.8,-91.1 622.8,-91.1 628.8,-97.1 628.8,-103.1 628.8,-103.1 628.8,-152.9 628.8,-152.9 628.8,-158.9 622.8,-164.9 616.8,-164.9"/>
+<text xml:space="preserve" text-anchor="middle" x="534.98" y="-151" font-family="Courier New" font-size="11.00">UART Transmitter</text>
+<text xml:space="preserve" text-anchor="middle" x="534.98" y="-137.8" font-family="Courier New" font-size="11.00">(uart_tx.v)</text>
+<text xml:space="preserve" text-anchor="middle" x="534.98" y="-111.6" font-family="Courier New" font-size="11.00">States: IDLE, START, DATA,</text>
+<text xml:space="preserve" text-anchor="middle" x="534.98" y="-98.4" font-family="Courier New" font-size="11.00">PARITY, STOP</text>
+</g>
+<!-- clk&#45;&gt;tx_inst -->
+<g id="edge3" class="edge">
+<title>clk-&gt;tx_inst</title>
+<path fill="none" stroke="#2c3e50" d="M121.19,-281.76C185.33,-304.77 319.32,-341.67 416.17,-292 463.17,-267.89 495.66,-215.34 514.44,-176.19"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="517.59,-177.71 518.62,-167.16 511.24,-174.76 517.59,-177.71"/>
+</g>
+<!-- rst -->
+<g id="node2" class="node">
+<title>rst</title>
+<ellipse fill="#ebf5fb" stroke="black" cx="83.07" cy="-202" rx="50.74" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="83.07" y="-198.7" font-family="Courier New" font-size="11.00">rst (BTNC)</text>
+</g>
+<!-- rst&#45;&gt;brg -->
+<g id="edge4" class="edge">
+<title>rst-&gt;brg</title>
+<path fill="none" stroke="#2c3e50" d="M134.12,-202C150.95,-202 170.18,-202 188.81,-202"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="188.78,-205.5 198.78,-202 188.78,-198.5 188.78,-205.5"/>
+</g>
+<!-- rst&#45;&gt;rx_inst -->
+<g id="edge5" class="edge">
+<title>rst-&gt;rx_inst</title>
+<path fill="none" stroke="#2c3e50" d="M118.36,-215.29C141.68,-224.3 173.24,-236.44 201.14,-247 277.41,-275.87 363.81,-307.77 429.46,-331.85"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="428.21,-335.12 438.8,-335.27 430.62,-328.55 428.21,-335.12"/>
+</g>
+<!-- rst&#45;&gt;tx_inst -->
+<g id="edge6" class="edge">
+<title>rst-&gt;tx_inst</title>
+<path fill="none" stroke="#2c3e50" d="M116.96,-188.17C145.5,-176.39 184.75,-160.78 201.14,-157 276.21,-139.67 362.97,-132.51 429.09,-129.64"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="428.99,-133.15 438.84,-129.25 428.71,-126.15 428.99,-133.15"/>
+</g>
+<!-- rx -->
+<g id="node3" class="node">
+<title>rx</title>
+<ellipse fill="#ebf5fb" stroke="black" cx="83.07" cy="-332" rx="67.07" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="83.07" y="-328.7" font-family="Courier New" font-size="11.00">rx (Serial In)</text>
+</g>
+<!-- rx&#45;&gt;rx_inst -->
+<g id="edge9" class="edge">
+<title>rx-&gt;rx_inst</title>
+<path fill="none" stroke="#2c3e50" d="M96.74,-349.93C112.44,-370.4 141.28,-402.77 175.14,-416 274.92,-454.99 310.9,-435.82 416.17,-416 422.97,-414.72 429.88,-413.06 436.76,-411.13"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="437.53,-414.55 446.11,-408.33 435.52,-407.85 437.53,-414.55"/>
+<text xml:space="preserve" text-anchor="middle" x="271.85" y="-441.31" font-family="Courier New" font-size="9.00">rx</text>
+</g>
+<!-- tx_start -->
+<g id="node4" class="node">
+<title>tx_start</title>
+<ellipse fill="#ebf5fb" stroke="black" cx="83.07" cy="-137" rx="42.57" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="83.07" y="-133.7" font-family="Courier New" font-size="11.00">tx_start</text>
+</g>
+<!-- tx_start&#45;&gt;tx_inst -->
+<g id="edge14" class="edge">
+<title>tx_start-&gt;tx_inst</title>
+<path fill="none" stroke="#2c3e50" d="M112.67,-123.66C135.92,-113.59 169.88,-100.61 201.14,-95.2 276.86,-82.09 363.24,-91.3 429.03,-103.26"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="428.27,-106.68 438.75,-105.08 429.56,-99.8 428.27,-106.68"/>
+<text xml:space="preserve" text-anchor="middle" x="271.85" y="-97.9" font-family="Courier New" font-size="9.00">tx_start</text>
+</g>
+<!-- tx_data -->
+<g id="node5" class="node">
+<title>tx_data</title>
+<ellipse fill="#ebf5fb" stroke="black" cx="83.07" cy="-72" rx="62.99" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="83.07" y="-68.7" font-family="Courier New" font-size="11.00">tx_data [7:0]</text>
+</g>
+<!-- tx_data&#45;&gt;tx_inst -->
+<g id="edge15" class="edge">
+<title>tx_data-&gt;tx_inst</title>
+<path fill="none" stroke="#2c3e50" d="M146.35,-71.5C164.05,-71.37 183.36,-71.26 201.14,-71.2 263.99,-70.99 280.1,-64.16 342.56,-71.2 375.91,-74.96 383.88,-78.86 416.17,-88 420.61,-89.26 425.13,-90.58 429.69,-91.96"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="428.33,-95.2 438.92,-94.8 430.39,-88.51 428.33,-95.2"/>
+<text xml:space="preserve" text-anchor="middle" x="271.85" y="-73.9" font-family="Courier New" font-size="9.00">data_in [7:0]</text>
+</g>
+<!-- brg&#45;&gt;rx_inst -->
+<g id="edge7" class="edge">
+<title>brg-&gt;rx_inst</title>
+<path fill="none" stroke="#e74c3c" stroke-width="2" d="M321.36,-233.21C361.98,-259.34 420.42,-296.94 465.76,-326.11"/>
+<polygon fill="#e74c3c" stroke="#e74c3c" stroke-width="2" points="462.37,-328.09 472.68,-330.56 466.16,-322.21 462.37,-328.09"/>
+<text xml:space="preserve" text-anchor="middle" x="391.87" y="-293.74" font-family="Courier New" font-size="9.00">baud_tick</text>
+</g>
+<!-- brg&#45;&gt;tx_inst -->
+<g id="edge8" class="edge">
+<title>brg-&gt;tx_inst</title>
+<path fill="none" stroke="#e74c3c" stroke-width="2" d="M343.52,-181.97C369.9,-174.5 400.45,-165.84 429.26,-157.68"/>
+<polygon fill="#e74c3c" stroke="#e74c3c" stroke-width="2" points="428.62,-161.5 437.29,-155.4 426.71,-154.76 428.62,-161.5"/>
+<text xml:space="preserve" text-anchor="middle" x="391.87" y="-176.5" font-family="Courier New" font-size="9.00">baud_tick</text>
+</g>
+<!-- rx_data -->
+<g id="node13" class="node">
+<title>rx_data</title>
+<ellipse fill="#f9e79f" stroke="black" cx="825.56" cy="-489" rx="62.99" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-485.7" font-family="Courier New" font-size="11.00">rx_data [7:0]</text>
+</g>
+<!-- rx_inst&#45;&gt;rx_data -->
+<g id="edge10" class="edge">
+<title>rx_inst-&gt;rx_data</title>
+<path fill="none" stroke="#2c3e50" d="M618.45,-407.78C630.27,-412.99 642.31,-418.2 653.8,-423 694.29,-439.92 740.77,-457.78 775.01,-470.65"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="773.66,-473.89 784.25,-474.12 776.12,-467.33 773.66,-473.89"/>
+<text xml:space="preserve" text-anchor="middle" x="691.6" y="-455.57" font-family="Courier New" font-size="9.00">data_out [7:0]</text>
+</g>
+<!-- rx_valid -->
+<g id="node14" class="node">
+<title>rx_valid</title>
+<ellipse fill="#f9e79f" stroke="black" cx="825.56" cy="-424" rx="42.57" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-420.7" font-family="Courier New" font-size="11.00">rx_valid</text>
+</g>
+<!-- rx_inst&#45;&gt;rx_valid -->
+<g id="edge11" class="edge">
+<title>rx_inst-&gt;rx_valid</title>
+<path fill="none" stroke="#2c3e50" d="M629.68,-387.53C678.06,-396.59 735.13,-407.27 774.97,-414.72"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="774.27,-418.15 784.75,-416.55 775.56,-411.27 774.27,-418.15"/>
+<text xml:space="preserve" text-anchor="middle" x="691.6" y="-407.69" font-family="Courier New" font-size="9.00">rx_done</text>
+</g>
+<!-- parity_error -->
+<g id="node15" class="node">
+<title>parity_error</title>
+<ellipse fill="#f9e79f" stroke="black" cx="825.56" cy="-359" rx="58.9" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-355.7" font-family="Courier New" font-size="11.00">parity_error</text>
+</g>
+<!-- rx_inst&#45;&gt;parity_error -->
+<g id="edge12" class="edge">
+<title>rx_inst-&gt;parity_error</title>
+<path fill="none" stroke="#2c3e50" d="M629.68,-366.43C670.54,-364.87 717.61,-363.08 755.25,-361.64"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="755.24,-365.15 765.1,-361.27 754.97,-358.15 755.24,-365.15"/>
+<text xml:space="preserve" text-anchor="middle" x="691.6" y="-368.19" font-family="Courier New" font-size="9.00">parity_error</text>
+</g>
+<!-- framing_error -->
+<g id="node16" class="node">
+<title>framing_error</title>
+<ellipse fill="#f9e79f" stroke="black" cx="825.56" cy="-294" rx="62.99" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-290.7" font-family="Courier New" font-size="11.00">framing_error</text>
+</g>
+<!-- rx_inst&#45;&gt;framing_error -->
+<g id="edge13" class="edge">
+<title>rx_inst-&gt;framing_error</title>
+<path fill="none" stroke="#2c3e50" d="M629.68,-345.32C675.01,-333.39 727.98,-319.44 767.24,-309.1"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="767.94,-312.53 776.72,-306.6 766.16,-305.76 767.94,-312.53"/>
+<text xml:space="preserve" text-anchor="middle" x="691.6" y="-341.51" font-family="Courier New" font-size="9.00">framing_error</text>
+</g>
+<!-- tx -->
+<g id="node9" class="node">
+<title>tx</title>
+<ellipse fill="#f9e79f" stroke="black" cx="825.56" cy="-229" rx="71.15" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-225.7" font-family="Courier New" font-size="11.00">tx (Serial Out)</text>
+</g>
+<!-- tx_inst&#45;&gt;tx -->
+<g id="edge16" class="edge">
+<title>tx_inst-&gt;tx</title>
+<path fill="none" stroke="#2c3e50" d="M629.68,-160.79C676.76,-177.27 732.08,-196.63 771.73,-210.51"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="770.45,-213.77 781.04,-213.77 772.76,-207.16 770.45,-213.77"/>
+<text xml:space="preserve" text-anchor="middle" x="691.6" y="-196.15" font-family="Courier New" font-size="9.00">tx</text>
+</g>
+<!-- tx_busy -->
+<g id="node10" class="node">
+<title>tx_busy</title>
+<ellipse fill="#f9e79f" stroke="black" cx="825.56" cy="-164" rx="38.48" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-160.7" font-family="Courier New" font-size="11.00">tx_busy</text>
+</g>
+<!-- tx_inst&#45;&gt;tx_busy -->
+<g id="edge17" class="edge">
+<title>tx_inst-&gt;tx_busy</title>
+<path fill="none" stroke="#2c3e50" d="M629.68,-139.69C678.81,-145.82 736.9,-153.06 776.8,-158.04"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="776.2,-161.49 786.56,-159.26 777.07,-154.55 776.2,-161.49"/>
+<text xml:space="preserve" text-anchor="middle" x="691.6" y="-154.03" font-family="Courier New" font-size="9.00">tx_busy</text>
+</g>
+<!-- tx_done -->
+<g id="node11" class="node">
+<title>tx_done</title>
+<ellipse fill="#f9e79f" stroke="black" cx="825.56" cy="-99" rx="38.48" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-95.7" font-family="Courier New" font-size="11.00">tx_done</text>
+</g>
+<!-- tx_inst&#45;&gt;tx_done -->
+<g id="edge18" class="edge">
+<title>tx_inst-&gt;tx_done</title>
+<path fill="none" stroke="#2c3e50" d="M629.72,-110.35C637.84,-109.15 645.95,-108.08 653.8,-107.2 694.74,-102.62 741.49,-100.6 775.71,-99.7"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="775.38,-103.21 785.3,-99.48 775.22,-96.21 775.38,-103.21"/>
+<text xml:space="preserve" text-anchor="middle" x="691.6" y="-109.9" font-family="Courier New" font-size="9.00">tx_done</text>
+</g>
+<!-- tx_count -->
+<g id="node12" class="node">
+<title>tx_count</title>
+<ellipse fill="#f9e79f" stroke="black" cx="825.56" cy="-34" rx="67.07" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="825.56" y="-30.7" font-family="Courier New" font-size="11.00">tx_count [7:0]</text>
+</g>
+<!-- tx_inst&#45;&gt;tx_count -->
+<g id="edge19" class="edge">
+<title>tx_inst-&gt;tx_count</title>
+<path fill="none" stroke="#2c3e50" d="M629.62,-91.59C637.77,-88.67 645.91,-85.83 653.8,-83.2 690.74,-70.88 732.77,-58.74 765.89,-49.61"/>
+<polygon fill="#2c3e50" stroke="#2c3e50" points="766.58,-53.05 775.3,-47.03 764.73,-46.3 766.58,-53.05"/>
+<text xml:space="preserve" text-anchor="middle" x="691.6" y="-85.9" font-family="Courier New" font-size="9.00">tx_count [7:0]</text>
+</g>
+</g>
+</svg>
