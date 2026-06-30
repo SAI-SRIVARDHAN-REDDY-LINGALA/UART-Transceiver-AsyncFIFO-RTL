@@ -1,4 +1,4 @@
-# UART Transceiver — RTL Implementation in Verilog
+# UART Transceiver — RTL Implementation in Verilog   
 
 **9600 baud | 8E1 | 16x oversampling | Basys3 (100 MHz)**
 
