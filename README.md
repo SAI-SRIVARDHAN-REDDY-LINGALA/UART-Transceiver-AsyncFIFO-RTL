@@ -7,7 +7,7 @@
 ## Overview
 
 Full-duplex UART transceiver implemented in synthesizable Verilog. Includes a baud rate generator, FSM-based transmitter, FSM-based receiver with noise rejection and parity checking, and a loopback testbench suite.
-
+   
 Designed for the Digilent Basys3 FPGA (Artix-7). Simulated with Icarus Verilog and GTKWave.
 
 ---
